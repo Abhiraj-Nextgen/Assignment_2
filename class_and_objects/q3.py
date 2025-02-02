@@ -10,8 +10,7 @@ class School(ABC): # Abstract class
     def update_details(self, *args, **kwargs): #Abstract method to update details
         pass
 
-# Parent Class inheriting from School
-class Class(School):
+class Class(School): #Parent Class inheriting from School
     def __init__(self, section_name: str, class_teacher_name: str): #Initializing class details
         self.section_name = section_name
         self.class_teacher_name = class_teacher_name
@@ -27,8 +26,7 @@ class Class(School):
             self.class_teacher_name = class_teacher_name
         print("Class details updated")
 
-# Child class inheriting from Class
-class Students(Class):
+class Students(Class): #Child class inheriting from Class
     def __init__(self, name: str, roll_no: int, subject_marks: list, section_name: str, class_teacher_name: str): #Initializing student details along with inherited class details
         super().__init__(section_name, class_teacher_name)  # Inheriting from Class
         self.name = name
