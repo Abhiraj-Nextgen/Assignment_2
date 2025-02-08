@@ -16,13 +16,13 @@ class Class:
 
 class Students(Class): #Child class inheriting from Class
     def __init__(self, name: str, roll_no: int, subject_marks: list, section_name: str, class_teacher_name: str): #Initializing student details with inherited class details
-        super().__init__(section_name, class_teacher_name)  # Inheriting from Class
+        super().__init__(section_name, class_teacher_name)  #Inheriting from Class
         self.name = name
         self.roll_no = roll_no
         self.subject_marks = subject_marks
 
     def display(self): #Displaying student and class details
-        super().display()  # Calling parent class display method
+        super().display()  #Calling parent class display method
         print(f"Student Name: {self.name}")
         print(f"Roll No: {self.roll_no}")
         print(f"Subject Marks: {self.subject_marks}")
@@ -31,7 +31,7 @@ class Students(Class): #Child class inheriting from Class
         return sum(self.subject_marks) / len(self.subject_marks) if self.subject_marks else 0
 
     def update_details(self, name=None, roll_no=None, subject_marks=None, section_name=None, class_teacher_name=None): #Updating student and class details
-        super().update_details(section_name, class_teacher_name)  # Call parent method
+        super().update_details(section_name, class_teacher_name)  #Call parent method
         if name:
             self.name = name
         if roll_no:
