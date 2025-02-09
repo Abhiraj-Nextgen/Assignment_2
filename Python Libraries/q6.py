@@ -25,13 +25,13 @@ plt.ylabel("Y Values")
 plt.legend()
 plt.savefig("scatter_plot.jpg")
 
-plt.figure() #Customize Line Style and Markers
+plt.figure() #Customizing Line Style and Markers
 plt.plot(x, y, linestyle="--", marker="o", color="g", label="Dashed Line with Markers")
 plt.title("Custom Line Style and Markers")
 plt.legend()
 plt.savefig("custom_line_plot.jpg")
 
-plt.figure() #Plot another dataset on the same plot
+plt.figure() #Plotting another dataset on the same plot
 plt.plot(x, y, linestyle="-", color="b", label="y = x^2")
 plt.plot(x, z, linestyle="--", color="r", label="z = x^3")
 plt.title("Comparing Quadratic and Cubic Functions")
